@@ -26,9 +26,17 @@ export default ({ data }) => {
                   </a>
                 </span>
                 <span>
-                  <a href={i.homepage} target="_blank" className="btn">
-                    Demo
-                  </a>
+                  {String(i.homepage).length > 4 ? (
+                    <a
+                      href={i.homepage}
+                      target="_blank"
+                      className="btn btn-success"
+                    >
+                      Demo
+                    </a>
+                  ) : (
+                    ""
+                  )}
                 </span>
               </div>
             </li>
