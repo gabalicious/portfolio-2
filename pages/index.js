@@ -16,7 +16,7 @@ const Home = ({ data }) => {
     }, 2000);
   }, []);
 
-  const override = css`
+  const centerLoader = css`
     margin: auto;
     margin-top: 20%;
   `;
@@ -26,7 +26,7 @@ const Home = ({ data }) => {
       <Meta />
       {isLoading ? (
         <div style={{ height: "640px" }}>
-          <GridLoader css={override} size={38} />
+          <GridLoader css={centerLoader} size={38} />
         </div>
       ) : (
         <>
@@ -59,7 +59,8 @@ Home.getInitialProps = async () => {
     `https://api.github.com/users/${Config.GITHUB_USER_NAME}/repos?sort=created`
   );
   const data = await res.json();
-  const filtered = data.filter(i => !i.fork && i.description != null);
+  console.log("data", data.length);
+  const filtered = data.filter((i) => i.description != null);
   return { data: filtered };
 };
 

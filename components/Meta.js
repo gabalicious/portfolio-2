@@ -11,7 +11,7 @@ export default () => (
       />
       <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
       <link rel="shortcut icon" href="/favicon.ico"></link>
-      <title>Rocktim Saikia | Software Engineer</title>
+      <title>Justin Gaba | Software Engineer</title>
       <link
         href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Noto+Sans:400,600,700&display=swap"
         rel="stylesheet"

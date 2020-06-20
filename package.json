@@ -1,12 +1,12 @@
 {
-  "name": "rocktim",
+  "name": "justingaba",
   "version": "1.0.0",
-  "description": "Personal website V1",
-  "author": "Rocktim Saikia <srocktim61@gmail.com>",
+  "description": "github website V2",
+  "author": "Justin Gaba <justin@gaba.codes>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RocktimSaikia/portfolio-v1"
+    "url": "https://github.com/gabalicious/portfolio-2"
   },
   "keywords": [
     "nextjs",
@@ -20,13 +20,13 @@
     "build": "next build"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.22",
+    "@emotion/core": "^10.0.28",
     "dependency-fetcher": "^1.1.0",
     "isomorphic-unfetch": "^3.0.0",
-    "next": "^9.1.1",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-reveal": "^1.2.2",
-    "react-spinners": "^0.6.1"
+    "react-spinners": "^0.8.3"
   }
 }

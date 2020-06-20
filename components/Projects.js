@@ -7,7 +7,7 @@ export default ({ data }) => {
   return (
     <div className="projects">
       <ul className="project-cards">
-        {data.slice(0, 9).map((i, index) => (
+        {data.map((i, index) => (
           <Fade bottom duration={1500} delay={100 * index} key={i.id}>
             <li className="project-card">
               <div className="about">
@@ -17,11 +17,11 @@ export default ({ data }) => {
                 <p>{i.description}</p>
               </div>
               <div style={{ marginBottom: "70px" }}>
-                <Tags name={i.name}></Tags>
+                {/* <Tags name={i.name}></Tags> */}
               </div>
               <div className="buttons" style={{ marginBottom: "20px" }}>
                 <span>
-                  <a href={i.url} target="_blank" className="btn">
+                  <a href={i.html_url} target="_blank" className="btn">
                     Repo
                   </a>
                 </span>
@@ -90,7 +90,7 @@ export default ({ data }) => {
         .buttons > span > .btn {
           text-decoration: none;
           color: #fff;
-          background: #6200edb8;
+          background: #ed0000b8;
           border-radius: 20px;
           box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
             0 4px 6px -2px rgba(0, 0, 0, 0.05);
