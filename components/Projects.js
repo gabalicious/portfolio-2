@@ -7,41 +7,44 @@ export default ({ data }) => {
   return (
     <div className="projects">
       <ul className="project-cards">
-        {data.map((i, index) => (
-          <Fade bottom duration={1500} delay={100 * index} key={i.id}>
-            <li className="project-card">
-              <div className="about">
-                <p>
-                  <RepoIcon /> <span className="project-title">{i.name}</span>
-                </p>
-                <p>{i.description}</p>
-              </div>
-              <div style={{ marginBottom: "70px" }}>
-                {/* <Tags name={i.name}></Tags> */}
-              </div>
-              <div className="buttons" style={{ marginBottom: "20px" }}>
-                <span>
-                  <a href={i.html_url} target="_blank" className="btn">
-                    Repo
-                  </a>
-                </span>
-                <span>
-                  {String(i.homepage).length > 4 ? (
-                    <a
-                      href={i.homepage}
-                      target="_blank"
-                      className="btn btn-success"
-                    >
-                      Demo
+        {data
+          // push repos w/ demo links to top of page
+          .sort((a, b) => String(b.homepage).length - String(a.homepage).length)
+          .map((i, index) => (
+            <Fade bottom duration={1500} delay={100 * index} key={i.id}>
+              <li className="project-card">
+                <div className="about">
+                  <p>
+                    <RepoIcon /> <span className="project-title">{i.name}</span>
+                  </p>
+                  <p>{i.description}</p>
+                </div>
+                <div style={{ marginBottom: "70px" }}>
+                  {/* <Tags name={i.name}></Tags> */}
+                </div>
+                <div className="buttons" style={{ marginBottom: "20px" }}>
+                  <span>
+                    <a href={i.html_url} target="_blank" className="btn">
+                      Repo
                     </a>
-                  ) : (
-                    ""
-                  )}
-                </span>
-              </div>
-            </li>
-          </Fade>
-        ))}
+                  </span>
+                  <span>
+                    {String(i.homepage).length > 4 ? (
+                      <a
+                        href={i.homepage}
+                        target="_blank"
+                        className="btn btn-success"
+                      >
+                        Demo
+                      </a>
+                    ) : (
+                      ""
+                    )}
+                  </span>
+                </div>
+              </li>
+            </Fade>
+          ))}
       </ul>
       <style jsx>{`
         .projects {
