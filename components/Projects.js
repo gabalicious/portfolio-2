@@ -8,7 +8,6 @@ export default ({ data }) => {
     <div className="projects">
       <ul className="project-cards">
         {data
-          // sort repos w/ demo links first
           .sort((a, b) => String(b.homepage).length - String(a.homepage).length)
           .map((i, index) => (
             <Fade bottom duration={1500} delay={100 * index} key={i.id}>
