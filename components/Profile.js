@@ -113,9 +113,14 @@ export default ({
           display: inline-block;
           margin-right: 10px;
           background: #ed0000b8;
-          padding: 8px 10px;
+          padding: 7px 10px;
           border-radius: 50%;
           box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+          text-shadow: 1px 1px 1px #00000060;
+        }
+
+        .social > li:hover {
+          text-shadow: 2px 2px 2px #00000090;
         }
         .social > li > a {
           color: #fff;

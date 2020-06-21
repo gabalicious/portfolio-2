@@ -25,6 +25,7 @@ export default ({ data }) => {
                 <div className="buttons" style={{ marginBottom: "20px" }}>
                   <span>
                     <a href={i.html_url} target="_blank" className="btn">
+                      <i className="fab fa-github-alt"></i>
                       Repo
                     </a>
                   </span>
@@ -35,7 +36,7 @@ export default ({ data }) => {
                         target="_blank"
                         className="btn btn-success"
                       >
-                        Demo
+                        <i className="fas fa-link"></i> Demo
                       </a>
                     ) : (
                       ""
@@ -47,6 +48,9 @@ export default ({ data }) => {
           ))}
       </ul>
       <style jsx>{`
+        .fab:before {
+          padding-right: 5px;
+        }
         .projects {
           margin-left: 190px;
         }
@@ -106,6 +110,13 @@ export default ({ data }) => {
           box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
             0 4px 6px -2px rgba(0, 0, 0, 0.05);
           padding: 5px 20px;
+          text-shadow: 1px 1px 1px #00000060;
+        }
+        .buttons > span > .btn:hover {
+          text-shadow: 2px 2px 2px #00000090;
+        }
+        .buttons > span > .btn.btn-success {
+          background: #00cc99;
         }
         .project-card > p:last-child > span {
           margin: 10px;
